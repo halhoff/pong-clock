@@ -14,7 +14,6 @@
 #define PADDLE_WIDTH 20
 #define PADDLE_HEIGHT 100
 #define TICK 10 // milliseconds
-#define TRAIL_LENGTH 50
 
 struct Paddle {
     f32 x, y;
