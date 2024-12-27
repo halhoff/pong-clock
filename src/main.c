@@ -71,17 +71,11 @@ void calculateTrajectory(struct Trajectory *trajectory, struct Ball *ball, struc
     }
     trajectory->y = ballCopy.y;
 
-    printf("%.2f %d\n", trajectory->y, tickCount);
-
     if (trajectory->collision) {
-        printf("%s\n", "change left paddle dy");
         leftPaddle->dy = - (leftPaddle->y - trajectory->y) / tickCount;
-        printf("%.2f\n", leftPaddle->dy);
     }
     else {
-        printf("%s\n", "change right paddle dy");
         rightPaddle->dy = - (rightPaddle->y - trajectory->y) / tickCount;
-        printf("%.2f\n", rightPaddle->dy);
     }
 }
 

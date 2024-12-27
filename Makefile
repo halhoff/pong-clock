@@ -16,6 +16,11 @@ EXEC = bin/main.exe
 
 main.exe: $(EXEC)
 
+$(OBJ): | bin
+
+bin:
+	mkdir -p bin
+
 $(EXEC): $(OBJ)
 	$(CC) $(OBJ) -o $(EXEC) $(LDFLAGS)
 
